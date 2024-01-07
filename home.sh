@@ -4,7 +4,7 @@
 sudo apt update && sudo apt upgrade
 
 # Installation des outils necessaires
-sudo apt install -y nodejs wget vim kitty ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen neofetch zsh fonts-firacode
+sudo apt install -y nodejs npm wget vim kitty ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen neofetch zsh fonts-firacode
 
 # Cloner le dépôt NeoVim et entrer dans le dossier
 git clone https://github.com/neovim/neovim
