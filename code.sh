@@ -39,3 +39,17 @@ sudo mv lazygit /usr/local/bin/lazygit
 rm "lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 
 sudo npm install -g tree-sitter-cli
+
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian bullseye stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+
+sudo usermod -aG docker ${USER}
+
+sudo systemctl start docker
